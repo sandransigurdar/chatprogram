@@ -1,0 +1,19 @@
+<h1>Welcome to {{roomId}}</h1>
+
+<dialog></dialog>
+<input [(ngModel)]="messageToSend" />
+<button (click)="sendMsg()">Send message</button>
+
+<h2>BELOW IS CHAT:</h2>
+
+<li style="list-style: none;" *ngFor="let messages of chatArray">
+    <a>{{messages}}</a>
+</li>
+<br>
+
+<h2>BELOW ARE USERS:</h2>
+<li style="list-style: none;" *ngFor="let user of userArray">
+    <button (click)="enterPrivateChat()">{{user}}</button>
+</li>
+
+<button (click)="leaveTheRoom()">Leave Room</button>

@@ -1,0 +1,16 @@
+<div class = "container">
+	<div class="wrapper">
+        <div action="" method="post" name="roomlistform" class="form-signin">
+        <h3 class="form-signin-heading">Available rooms: </h3>  
+        <hr class="colorgraph"><br>
+            <ul class="roomlist-list"> 
+                <li style="list-style: none;" *ngFor="let room of rooms">
+                <a [routerLink]="['/rooms', room]">{{room}}</a>
+                </li>
+            </ul>
+            <input type="text" class="form-control" [(ngModel)]="newRoomName" />        
+            <button  class="btn btn-lg btn-primary btn-block" (click)="createNewRoom()">Create new room</button><br>
+            <button class="btn btn-lg btn-primary btn-block" routerLink="/login">Back to login</button>
+	    </div>
+    </div>
+</div>
